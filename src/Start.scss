@@ -80,7 +80,8 @@ $yellow-op:rgba(255, 255, 0,0.3);
         text-shadow:
             0 0 10px $yellow,
             0 0 20px $green;
-        @include animate()
+        @include animate();
+        margin: 0px !important;
     }
 }
 #stopAnimation{

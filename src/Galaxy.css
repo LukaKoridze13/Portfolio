@@ -1,0 +1,123 @@
+@import '~mdb-ui-kit/css/mdb.min.css';
+
+.galaxy {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+}
+
+.earth {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: 80vw;
+    max-width: 700px;
+    max-height: 700px;
+    z-index: 2;
+}
+
+.twinkling {
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 2;
+}
+
+.typing-demo1,
+.typing-demo2,
+.typing-demo3,
+.typing-demo4 {
+    width: 145px;
+    color: white;
+    animation: typing 1.5s steps(22) forwards, blink .2s step-end 8 forwards;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid white;
+    font-family: monospace;
+    font-size: 20px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    z-index: 4;
+    opacity: 0;
+}
+
+.typing-demo2 {
+    width: 325px;
+    top: 150px;
+    animation: typing 2s 1.5s steps(22) forwards, blink .2s 2s step-end 10 forwards;
+}
+
+.typing-demo3 {
+    width: 223px;
+    top: 200px;
+    animation: typing 2s 3.5s steps(22) forwards, blink .2s 4s step-end 10 forwards;
+}
+
+.typing-demo4 {
+    width: 300px;
+    top: 250px;
+    animation: typing 2s 5.5s steps(22) forwards, blink .2s 6s step-end 10 forwards;
+}
+
+@keyframes typing {
+    0% {
+        opacity: 1;
+        width: 0
+    }
+
+    1% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    100% {
+        border-color: transparent
+    }
+}
+
+@media (max-width: 500px) {
+
+    .typing-demo1{
+        top: 30px;
+        left: 20%;
+    }
+    .typing-demo2{
+        top: 60px;
+        left: 20%;
+    }
+    .typing-demo3{
+        top: 90px;
+        left: 20%;
+    }
+    .typing-demo4 {
+        top: 120px;
+        left: 20%;
+    }
+
+    .earth {
+        top: 60vh;
+    }
+
+    .earth div {
+        width: 80vw;
+        height: 80vw;
+    }
+
+    .earth canvas {
+        width: 80vw;
+        height: 80vw;
+    }
+}

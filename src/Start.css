@@ -65,6 +65,7 @@
   text-shadow: 0 0 10px #ffff00, 0 0 20px #39FF14;
   -webkit-animation: sparkle 8s infinite linear;
           animation: sparkle 8s infinite linear;
+  margin: 0px !important;
 }
 
 #stopAnimation {
