@@ -1,0 +1,58 @@
+// Colors
+$bg-col: rgb(29, 29, 29);
+$pink: #FFACFC;
+$darkPink: #F148FB;
+$blue: #7122FA;
+
+.startBackground {
+    width: 100%;
+    height: 100vh;
+    background-color: $bg-col;
+
+    &__button {
+        width: 300px;
+        height: 120px;
+        position: relative;
+        background:
+            linear-gradient($bg-col, $bg-col) padding-box,
+            linear-gradient(45deg, $darkPink, $blue) border-box;
+        border-radius: 15px;
+        border: 5px solid transparent;
+    }
+
+    &__button::before {
+        content: '';
+        position: absolute;
+        // width: 300px;
+        // height: 120px;
+        top: -20px;
+        left: -20px;
+        right: -20px;
+        bottom: -20px;
+        border: 5px solid transparent;
+        border-radius: 15px;
+        background:
+            linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)) padding-box,
+            linear-gradient(45deg, $darkPink, $blue) border-box;
+        z-index: 0;
+    }
+
+    &__button::after {
+        content: '';
+        position: absolute;
+        top: 120%;
+        left: 0;
+        width: 300px;
+        height: 120px;
+        background: linear-gradient(45deg, $darkPink, $blue);
+        transform: perspective(14px) rotateX(35deg) scale(1, 0.28);
+        filter: blur(15px);
+        opacity: 0.5;
+    }
+
+    &--text {
+        font-weight: 800;
+        font-size: 65px;
+        z-index: 1;
+    }
+}
