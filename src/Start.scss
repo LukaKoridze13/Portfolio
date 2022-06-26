@@ -6,11 +6,11 @@ $yellow: #ffff00;
 $yellow-op:rgba(255, 255, 0,0.3);
 
 @mixin animate {
-    animation: sparkle 5s infinite linear alternate;
+    animation: sparkle 8s infinite linear ;
     ;
 }
 @mixin animate2 {
-    animation: sparkle2 5s infinite linear alternate;
+    animation: sparkle2 8s infinite linear ;
     ;
 }
 
@@ -89,7 +89,10 @@ $yellow-op:rgba(255, 255, 0,0.3);
 }
 #light{
     animation: none;
-    border: 20px solid transparent;
+    border: 30px solid transparent;
+    width: 350px;
+    height:  150px;
+    filter: blur(40px);
 }
 @media (max-width:1100px) {
     .button::after{
@@ -120,26 +123,24 @@ $yellow-op:rgba(255, 255, 0,0.3);
     33% {
         opacity: 1;
     }
-    75% {
+    60%{
         opacity: 1;
     }
-
-    77% {
-        opacity: 0.8
+    61%{
+        opacity: 0.3;
     }
-
-    79% {
-        opacity: 1
-    }
-
-    81% {
-        opacity: 0.5;
-    }
-
-    83% {
+    64%{
         opacity: 1;
     }
-
+    65%{
+        opacity: 0.3;
+    }
+    66%{
+        opacity: 0.4;
+    }
+    68%{
+        opacity: 1;
+    }
     100% {
         opacity: 1
     }
@@ -154,41 +155,39 @@ $yellow-op:rgba(255, 255, 0,0.3);
     }
 
     27% {
-        opacity: 0.25
+        opacity: 0.2;
     }
 
     29% {
-        opacity: 0.3
+        opacity: 0.3;
     }
 
     31% {
-        opacity: 0.2;
+        opacity: 0.15;
     }
 
     33% {
         opacity: 0.3;
     }
-    75% {
+    60%{
         opacity: 0.3;
     }
-
-    77% {
-        opacity: 0.25
+    61%{
+        opacity: 0.1;
     }
-
-    79% {
-        opacity: 0.3
-    }
-
-    81% {
-        opacity: 0.2;
-    }
-
-    83% {
+    64%{
         opacity: 0.3;
     }
-
+    65%{
+        opacity: 0.1;
+    }
+    66%{
+        opacity: 0.15;
+    }
+    68%{
+        opacity: 0.3;
+    }
     100% {
-        opacity: 0.3
+        opacity: 0.3;
     }
 }

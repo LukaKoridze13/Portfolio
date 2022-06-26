@@ -1,88 +1,70 @@
 .startBackground {
   height: 100vh;
   width: 100vw;
-  background-color: #1d1d1d;
+  background-color: rgb(29, 29, 29);
   position: relative;
 }
-
 .startBackground .button {
   width: 300px;
   height: 120px;
   position: relative;
   border-radius: 15px;
   border: 5px solid transparent;
-  background: -webkit-gradient(linear, left top, left bottom, from(#1d1d1d), to(#1d1d1d)) padding-box, -webkit-gradient(linear, left top, right top, from(#39FF14), to(#ffff00)) border-box;
-  background: linear-gradient(#1d1d1d, #1d1d1d) padding-box, linear-gradient(to right, #39FF14, #ffff00) border-box;
-  -webkit-box-shadow: inset 0px 0px 4px #39FF14;
-          box-shadow: inset 0px 0px 4px #39FF14;
+  background: linear-gradient(rgb(29, 29, 29), rgb(29, 29, 29)) padding-box, linear-gradient(to right, #39FF14, #ffff00) border-box;
+  box-shadow: inset 0px 0px 4px #39FF14;
   z-index: 2;
   cursor: pointer;
-  -webkit-animation: sparkle 5s infinite linear alternate;
-          animation: sparkle 5s infinite linear alternate;
+  -webkit-animation: sparkle 8s infinite linear;
+          animation: sparkle 8s infinite linear;
 }
-
 .startBackground .button:hover {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(57, 255, 20, 0.3)), to(rgba(255, 255, 0, 0.3))) padding-box;
   background: linear-gradient(to right, rgba(57, 255, 20, 0.3), rgba(255, 255, 0, 0.3)) padding-box;
-  -webkit-box-shadow: inset 0px 0px 10px #39FF14;
-          box-shadow: inset 0px 0px 10px #39FF14;
+  box-shadow: inset 0px 0px 10px #39FF14;
 }
-
 .startBackground .button::after {
   pointer-events: none;
   content: "";
   position: absolute;
-  background: -webkit-gradient(linear, left top, right top, from(#39FF14), to(#ffff00));
   background: linear-gradient(to right, #39FF14, #ffff00);
   top: 120%;
   left: 0;
   width: 100%;
   height: 100%;
-  -webkit-transform: perspective(1.2rem) rotateX(30deg) scale(1.3, 0.4);
-          transform: perspective(1.2rem) rotateX(30deg) scale(1.3, 0.4);
-  -webkit-filter: blur(1em);
-          filter: blur(1em);
+  transform: perspective(1.2rem) rotateX(30deg) scale(1.3, 0.4);
+  filter: blur(1em);
   opacity: 0.3;
-  -webkit-animation: sparkle2 5s infinite linear alternate;
-          animation: sparkle2 5s infinite linear alternate;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  -webkit-animation: sparkle2 8s infinite linear;
+          animation: sparkle2 8s infinite linear;
+  box-sizing: border-box;
 }
-
 .startBackground .button:hover::after {
   opacity: 0.9;
   -webkit-animation: none;
           animation: none;
 }
-
 .startBackground .bg_shadow {
   width: 300px;
   height: 120px;
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   border-radius: 15px;
   border: 10px solid transparent;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  background: -webkit-gradient(linear, left top, left bottom, from(#1d1d1d), to(#1d1d1d)) padding-box, -webkit-gradient(linear, left top, right top, from(#39FF14), to(#ffff00)) border-box;
-  background: linear-gradient(#1d1d1d, #1d1d1d) padding-box, linear-gradient(to right, #39FF14, #ffff00) border-box;
+  box-sizing: content-box;
+  background: linear-gradient(rgb(29, 29, 29), rgb(29, 29, 29)) padding-box, linear-gradient(to right, #39FF14, #ffff00) border-box;
   z-index: 1;
-  -webkit-filter: blur(20px);
-          filter: blur(20px);
-  -webkit-animation: sparkle 5s infinite linear alternate;
-          animation: sparkle 5s infinite linear alternate;
+  filter: blur(20px);
+  -webkit-animation: sparkle 8s infinite linear;
+          animation: sparkle 8s infinite linear;
 }
-
 .startBackground .text {
   font-size: 60px;
   color: black;
   font-weight: bolder;
   text-shadow: 0 0 10px #ffff00, 0 0 20px #39FF14;
-  -webkit-animation: sparkle 5s infinite linear alternate;
-          animation: sparkle 5s infinite linear alternate;
+  -webkit-animation: sparkle 8s infinite linear;
+          animation: sparkle 8s infinite linear;
 }
 
 #stopAnimation {
@@ -94,7 +76,10 @@
 #light {
   -webkit-animation: none;
           animation: none;
-  border: 20px solid transparent;
+  border: 30px solid transparent;
+  width: 350px;
+  height: 150px;
+  filter: blur(40px);
 }
 
 @media (max-width: 1100px) {
@@ -102,7 +87,6 @@
     display: none;
   }
 }
-
 @-webkit-keyframes sparkle {
   0% {
     opacity: 1;
@@ -122,26 +106,28 @@
   33% {
     opacity: 1;
   }
-  75% {
+  60% {
     opacity: 1;
   }
-  77% {
-    opacity: 0.8;
+  61% {
+    opacity: 0.3;
   }
-  79% {
+  64% {
     opacity: 1;
   }
-  81% {
-    opacity: 0.5;
+  65% {
+    opacity: 0.3;
   }
-  83% {
+  66% {
+    opacity: 0.4;
+  }
+  68% {
     opacity: 1;
   }
   100% {
     opacity: 1;
   }
 }
-
 @keyframes sparkle {
   0% {
     opacity: 1;
@@ -161,26 +147,28 @@
   33% {
     opacity: 1;
   }
-  75% {
+  60% {
     opacity: 1;
   }
-  77% {
-    opacity: 0.8;
+  61% {
+    opacity: 0.3;
   }
-  79% {
+  64% {
     opacity: 1;
   }
-  81% {
-    opacity: 0.5;
+  65% {
+    opacity: 0.3;
   }
-  83% {
+  66% {
+    opacity: 0.4;
+  }
+  68% {
     opacity: 1;
   }
   100% {
     opacity: 1;
   }
 }
-
 @-webkit-keyframes sparkle2 {
   0% {
     opacity: 0.3;
@@ -189,37 +177,39 @@
     opacity: 0.3;
   }
   27% {
-    opacity: 0.25;
+    opacity: 0.2;
   }
   29% {
     opacity: 0.3;
   }
   31% {
-    opacity: 0.2;
+    opacity: 0.15;
   }
   33% {
     opacity: 0.3;
   }
-  75% {
+  60% {
     opacity: 0.3;
   }
-  77% {
-    opacity: 0.25;
+  61% {
+    opacity: 0.1;
   }
-  79% {
+  64% {
     opacity: 0.3;
   }
-  81% {
-    opacity: 0.2;
+  65% {
+    opacity: 0.1;
   }
-  83% {
+  66% {
+    opacity: 0.15;
+  }
+  68% {
     opacity: 0.3;
   }
   100% {
     opacity: 0.3;
   }
 }
-
 @keyframes sparkle2 {
   0% {
     opacity: 0.3;
@@ -228,34 +218,36 @@
     opacity: 0.3;
   }
   27% {
-    opacity: 0.25;
+    opacity: 0.2;
   }
   29% {
     opacity: 0.3;
   }
   31% {
-    opacity: 0.2;
+    opacity: 0.15;
   }
   33% {
     opacity: 0.3;
   }
-  75% {
+  60% {
     opacity: 0.3;
   }
-  77% {
-    opacity: 0.25;
+  61% {
+    opacity: 0.1;
   }
-  79% {
+  64% {
     opacity: 0.3;
   }
-  81% {
-    opacity: 0.2;
+  65% {
+    opacity: 0.1;
   }
-  83% {
+  66% {
+    opacity: 0.15;
+  }
+  68% {
     opacity: 0.3;
   }
   100% {
     opacity: 0.3;
   }
-}
-/*# sourceMappingURL=Start.css.map */
+}/*# sourceMappingURL=Start.css.map */
