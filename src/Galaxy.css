@@ -1,10 +1,16 @@
 @import '~mdb-ui-kit/css/mdb.min.css';
 
+.App {
+    background-color: black;
+}
+
 .galaxy {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     position: relative;
     background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+    margin: 0 auto;
+    max-width: 1920px;
 }
 
 .earth {
@@ -28,6 +34,7 @@
     background-size: cover;
     position: absolute;
     z-index: 2;
+    max-width: 1920px;
 }
 
 .typing-demo1,
@@ -90,21 +97,35 @@
 
 @media (max-width: 500px) {
 
-    .typing-demo1{
+    .typing-demo1,
+    .typing-demo2,
+    .typing-demo3,
+    .typing-demo4 {
+        font-size: 3vw;
+    }
+
+    .typing-demo1 {
         top: 30px;
         left: 20%;
+        width: 23vw;
     }
-    .typing-demo2{
+
+    .typing-demo2 {
         top: 60px;
         left: 20%;
+        width: 50vw;
     }
-    .typing-demo3{
+
+    .typing-demo3 {
         top: 90px;
         left: 20%;
+        width: 34vw;
     }
+
     .typing-demo4 {
         top: 120px;
         left: 20%;
+        width: 45vw;
     }
 
     .earth {

@@ -3,6 +3,7 @@
   width: 100vw;
   background-color: rgb(29, 29, 29);
   position: relative;
+  box-sizing: border-box;
 }
 .startBackground .button {
   width: 300px;

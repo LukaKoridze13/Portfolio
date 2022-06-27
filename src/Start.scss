@@ -19,6 +19,7 @@ $yellow-op:rgba(255, 255, 0,0.3);
     width: 100vw;
     background-color: $bg-col;
     position: relative;
+    box-sizing: border-box;
     .button {
         width: 300px;
         height: 120px;
