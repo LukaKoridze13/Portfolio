@@ -1,14 +1,18 @@
-import { useState } from 'react';
 import './Reset.css'
 import './GlobalStyles.css'
-import Start from './Start.js'
-import Galaxy from './Galaxy.js'
+import { Routes, Route } from 'react-router';
+import Story from './Story';
+import Starter from './Starter';
+import Portfolio from './Portfolio';
 function App() {
-  const [launch,setLaunch] = useState(false)
+
   return (
-    <div className="App" style={{width: '100%', maxWidth: '1920px', margin: '0 auto', height:'100vh', margin:'0 auto',boxSizing: 'border-box',padding:'0'}}>
-      {!launch && <Start onClick={()=>{setLaunch(!launch)}}/>}
-      {launch && <Galaxy/>}
+    <div className="App" style={{ width: '100%', maxWidth: '1920px', margin: '0 auto', height: '100vh', boxSizing: 'border-box', padding: '0' }}>
+        <Routes>
+          <Route path='/Portfolio/' element={<Starter />} />
+          <Route path="/Portfolio/Story" element={<Story />} />
+          <Route path="/Portfolio/Page" element={<Portfolio />} />
+        </Routes>
     </div>
   );
 }
