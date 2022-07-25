@@ -1,9 +1,9 @@
 import './Reset.css'
-import './GlobalStyles.css'
+import './Components/GlobalStyles.css'
 import { Routes, Route } from 'react-router';
-import Story from './Story';
-import Starter from './Starter';
-import Portfolio from './Portfolio';
+import Story from './Components/Story';
+import Starter from './Components/Starter';
+import Portfolio from './Components/Portfolio';
 function App() {
 
   return (
