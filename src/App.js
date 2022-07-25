@@ -9,9 +9,9 @@ function App() {
   return (
     <div className="App" style={{ width: '100%', maxWidth: '1920px', margin: '0 auto', height: '100vh', boxSizing: 'border-box', padding: '0' }}>
         <Routes>
-          <Route path='/Portfolio/' element={<Starter />} />
-          <Route path="/Portfolio/Story" element={<Story />} />
-          <Route path="/Portfolio/Page" element={<Portfolio />} />
+          <Route path='/Portfolio-React' element={<Starter />} />
+          <Route path="/Portfolio-React/Story" element={<Story />} />
+          <Route path="/Portfolio-React/Page" element={<Portfolio />} />
         </Routes>
     </div>
   );
